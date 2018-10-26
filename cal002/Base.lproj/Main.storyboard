@@ -53,7 +53,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="+"/>
                                 <connections>
-                                    <action selector="gxt_:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aa2-cK-P35"/>
+                                    <action selector="gxt_jia:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4LX-XL-k7X"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TqR-M2-28S">
@@ -85,7 +85,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="-"/>
                                 <connections>
-                                    <action selector="gxt_:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k9L-Sh-5Lt"/>
+                                    <action selector="gxt_jian:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NVR-6l-flw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9K-dX-XFn">
@@ -109,7 +109,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="*"/>
                                 <connections>
-                                    <action selector="gxt_:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rBv-vP-uW0"/>
+                                    <action selector="gxt_cheng:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y7Y-gB-orP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IH9-Ta-Otx">
