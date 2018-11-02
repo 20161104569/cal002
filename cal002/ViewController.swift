@@ -8,18 +8,16 @@
 
 import UIKit
 class ViewController: UIViewController{
-    var pt=0
-    var previousnumber = 0
+    var pt = 0
+    var previousnumber:Double = 0.0
     
-    var latternumber = 0
+    var latternumber:Double = 0.0
     
-    var result = 0
+    var result:Double = 0.0
     
-    var ca = 0
+    var ca = 0 //判断加减乘除
     @IBOutlet weak var test: UITextField!
     @IBAction func gxt_point(_ sender: Any) {
-
-    
         if pt == 0{
             test.text = test.text! + "."
             
@@ -29,17 +27,16 @@ class ViewController: UIViewController{
         else{
             test.text=test.text
         }
-
-    
-          //判断加减乘除
+        
     }
+    
     
     @IBAction func gxt_chu(_ sender: Any) {
         if test.text == " "{
             test.text = "0"
             ca = 4
         }else{
-            previousnumber = Int(test.text!)!
+            previousnumber = Double(test.text!)!
             test.text = String(previousnumber)
             test.text = ""
              ca = 4
@@ -52,7 +49,7 @@ class ViewController: UIViewController{
             test.text = "0"
             ca = 3
         }else{
-            previousnumber = Int(test.text!)!
+            previousnumber = Double(test.text!)!
             test.text = String(previousnumber)
             test.text = ""
             ca = 3
@@ -65,7 +62,7 @@ class ViewController: UIViewController{
             test.text = "0"
             ca = 2
         }else{
-            previousnumber = Int(test.text!)!
+            previousnumber = Double(test.text!)!
             test.text = String(previousnumber)
             test.text = ""
             ca = 2
@@ -77,7 +74,7 @@ class ViewController: UIViewController{
             test.text = "0"
             ca = 1
         }else{
-            previousnumber = Int(test.text!)!
+            previousnumber = Double(test.text!)!
             test.text = String(previousnumber)
             test.text = ""
             ca = 1
@@ -122,25 +119,25 @@ class ViewController: UIViewController{
     }
     
     @IBAction func gxt_dy(_ sender: Any) {
-        latternumber = Int(test.text!)!
+        latternumber = Double(test.text!)!
         test.text = String(latternumber)
         test.text = "0"
         if ca == 1{
             result = previousnumber + latternumber
+            test.text = String(format:"%.2lf",result)
         }else if ca == 2{
             result =  previousnumber - latternumber
+             test.text = String(format:"%.2lf",result)
         }else if ca == 3{
             result =  previousnumber * latternumber
+             test.text = String(format:"%.2lf",result)
         }else if ca == 4{
-            result =  previousnumber / latternumber        }
-        
-            test.text = String(result)
+            result =  previousnumber / latternumber
+             test.text = String(format:"%.2lf",result)
         }
-    
-    
-    
-   
-
+        
+           test.text = String(result)
+    }
     override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.}
