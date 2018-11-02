@@ -8,7 +8,7 @@
 
 import UIKit
 class ViewController: UIViewController{
-    var pt = 0
+    var pt = 0   //控制加减乘除
     var previousnumber:Double = 0.0
     
     var latternumber:Double = 0.0
