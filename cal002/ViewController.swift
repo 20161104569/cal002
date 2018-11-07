@@ -37,7 +37,7 @@ class ViewController: UIViewController{
             ca = 4
         }else{
             previousnumber = Double(test.text!)!
-            test.text = String(previousnumber)
+           
             test.text = ""
              ca = 4
             pt=0
@@ -50,7 +50,7 @@ class ViewController: UIViewController{
             ca = 3
         }else{
             previousnumber = Double(test.text!)!
-            test.text = String(previousnumber)
+           
             test.text = ""
             ca = 3
             pt=0
@@ -63,7 +63,7 @@ class ViewController: UIViewController{
             ca = 2
         }else{
             previousnumber = Double(test.text!)!
-            test.text = String(previousnumber)
+           
             test.text = ""
             ca = 2
             pt=0
@@ -75,7 +75,7 @@ class ViewController: UIViewController{
             ca = 1
         }else{
             previousnumber = Double(test.text!)!
-            test.text = String(previousnumber)
+           
             test.text = ""
             ca = 1
             pt=0
@@ -116,6 +116,8 @@ class ViewController: UIViewController{
         test.text = ""
         previousnumber = 0
         latternumber = 0
+        pt = 0
+        
     }
     
     @IBAction func gxt_dy(_ sender: Any) {
@@ -136,7 +138,8 @@ class ViewController: UIViewController{
              test.text = String(format:"%.2lf",result)
         }
         
-           test.text = String(result)
+        
+           pt = 0
     }
     override func viewDidLoad() {
     super.viewDidLoad()
