@@ -121,19 +121,31 @@ class ViewController: UIViewController{
     }
     
     @IBAction func gxt_dy(_ sender: Any) {
-        latternumber = Double(test.text!)!
-        test.text = String(latternumber)
-        test.text = "0"
+        //latternumber = Double(test.text!)!
+        //test.text = String(latternumber)
+        //test.text = "0"
         if ca == 1{
+            latternumber = Double(test.text!)!
+            test.text = String(latternumber)
+            test.text = "0"
             result = previousnumber + latternumber
             test.text = String(format:"%.2lf",result)
         }else if ca == 2{
+            latternumber = Double(test.text!)!
+            test.text = String(latternumber)
+            test.text = "0"
             result =  previousnumber - latternumber
              test.text = String(format:"%.2lf",result)
         }else if ca == 3{
+            latternumber = Double(test.text!)!
+            test.text = String(latternumber)
+            test.text = "0"
             result =  previousnumber * latternumber
              test.text = String(format:"%.2lf",result)
         }else if ca == 4{
+            latternumber = Double(test.text!)!
+            test.text = String(latternumber)
+            test.text = "0"
             result =  previousnumber / latternumber
              test.text = String(format:"%.2lf",result)
         }
