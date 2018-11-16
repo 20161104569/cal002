@@ -39,10 +39,12 @@ class ViewController: UIViewController{
             previousnumber = Double(test.text!)!
            
             test.text = ""
+            
              ca = 4
             pt=0
         }
     }
+    
     
     @IBAction func gxt_cheng(_ sender: Any) {
         if test.text == " "{
@@ -121,33 +123,30 @@ class ViewController: UIViewController{
     }
     
     @IBAction func gxt_dy(_ sender: Any) {
-        //latternumber = Double(test.text!)!
-        //test.text = String(latternumber)
-        //test.text = "0"
+        latternumber = Double(test.text!)!
+        test.text = String(latternumber)
+        test.text = "0"
         if ca == 1{
-            latternumber = Double(test.text!)!
-            test.text = String(latternumber)
-            test.text = "0"
+           
             result = previousnumber + latternumber
             test.text = String(format:"%.2lf",result)
         }else if ca == 2{
-            latternumber = Double(test.text!)!
-            test.text = String(latternumber)
-            test.text = "0"
+           
             result =  previousnumber - latternumber
              test.text = String(format:"%.2lf",result)
         }else if ca == 3{
-            latternumber = Double(test.text!)!
-            test.text = String(latternumber)
-            test.text = "0"
+            
             result =  previousnumber * latternumber
              test.text = String(format:"%.2lf",result)
         }else if ca == 4{
-            latternumber = Double(test.text!)!
-            test.text = String(latternumber)
-            test.text = "0"
+            if latternumber == 0
+            {
+                test.text = "除数不能为零 "
+            }
+            else{
             result =  previousnumber / latternumber
              test.text = String(format:"%.2lf",result)
+            }
         }
         
         
@@ -160,7 +159,4 @@ class ViewController: UIViewController{
 }
 
 }
-
-
-
 
