@@ -16,6 +16,15 @@ class ViewController: UIViewController{
     var result:Double = 0.0
     
     var ca = 0 //判断加减乘除
+    @IBAction func symbol(_ sender: Any) {
+        if test.text == "-"{
+            test.text?.removeFirst()
+    }
+    else {
+        test.text = "-" + test.text!
+    }
+ }
+        
     @IBOutlet weak var test: UITextField!
     @IBAction func gxt_point(_ sender: Any) {
         if pt == 0{
