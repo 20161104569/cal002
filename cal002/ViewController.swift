@@ -16,6 +16,9 @@ class ViewController: UIViewController{
     var result:Double = 0.0
     
     var ca = 0 //判断加减乘除
+    var two = ""
+    var a = ""
+    var fh = ""
     @IBAction func symbol(_ sender: Any) {
         if test.text == "-"{
             test.text?.removeFirst()
@@ -46,11 +49,15 @@ class ViewController: UIViewController{
             ca = 4
         }else{
             previousnumber = Double(test.text!)!
-           
-            test.text = ""
+            
+            a = String(previousnumber)
+            fh = "/"
+            test.text = a + fh
             
              ca = 4
             pt=0
+            two = ""
+            a = ""
         }
     }
     
@@ -61,10 +68,15 @@ class ViewController: UIViewController{
             ca = 3
         }else{
             previousnumber = Double(test.text!)!
-           
-            test.text = ""
+            
+            a = String(previousnumber)
+            fh = "*"
+            test.text = a + fh
+            
             ca = 3
             pt=0
+            two = ""
+            a = ""
         }
 }
 
@@ -74,10 +86,15 @@ class ViewController: UIViewController{
             ca = 2
         }else{
             previousnumber = Double(test.text!)!
-           
-            test.text = ""
+            
+            a = String(previousnumber)
+            fh = "-"
+            test.text = a + fh
+            
             ca = 2
             pt=0
+            two = ""
+            a = ""
         }
 }
     @IBAction func gxt_jia(_ sender: Any) {
@@ -86,41 +103,101 @@ class ViewController: UIViewController{
             ca = 1
         }else{
             previousnumber = Double(test.text!)!
-           
-            test.text = ""
+            
+            a = String(previousnumber)
+            fh = "+"
+            test.text = a + fh
+            
             ca = 1
             pt=0
+            two = ""
+            a = ""
         }
     }
     @IBAction func gxt_0(_ sender: Any) {
+        
+       
+        two = two + "0"
         test.text = test.text! + "0"
+        if ca != 0{
+            
+            test.text = a + fh + two
+            
+        }
     }
     @IBAction func gxt_9(_ sender: Any) {
+       
+        two = two + "9"
         test.text = test.text! + "9"
+        if ca != 0 {
+            a = String(previousnumber)
+            test.text = a + fh + two
+        }
+
     }
     @IBAction func gxt_8(_ sender: Any) {
+        two = two + "8"
         test.text = test.text! + "8"
+        if ca != 0 {
+            a = String(previousnumber)
+            test.text = a + fh + two
+        }
     }
     @IBAction func gxt_7(_ sender: Any) {
+        two = two + "7"
         test.text = test.text! + "7"
+        if ca != 0 {
+            a = String(previousnumber)
+            test.text = a + fh + two
+        }
     }
     @IBAction func gxt_6(_ sender: Any) {
+        two = two + "6"
         test.text = test.text! + "6"
+        if ca != 0 {
+            a = String(previousnumber)
+            test.text = a + fh + two
+        }
     }
     @IBAction func gxt_5(_ sender: Any) {
+        two = two + "5"
         test.text = test.text! + "5"
+        if ca != 0 {
+            a = String(previousnumber)
+            test.text = a + fh + two
+        }
     }
     @IBAction func gxt_4(_ sender: Any) {
+        two = two + "4"
         test.text = test.text! + "4"
+        if ca != 0 {
+            a = String(previousnumber)
+            test.text = a + fh + two
+        }
     }
     @IBAction func gxt_3(_ sender: Any) {
+        two = two + "3"
         test.text = test.text! + "3"
+        if ca != 0 {
+            a = String(previousnumber)
+            test.text = a + fh + two
+        }
     }
     @IBAction func gxt_2(_ sender: Any) {
+        two = two + "2"
         test.text = test.text! + "2"
+        if ca != 0 {
+            a = String(previousnumber)
+            test.text = a + fh + two
+        }
     }
     @IBAction func gxt_1(_ sender: Any) {
+        two = two + "1"
         test.text = test.text! + "1"
+        if ca != 0 {
+            a = String(previousnumber)
+            test.text = a + fh + two
+        }
     }
     
     @IBAction func gxt_d(_ sender: Any) {
@@ -128,11 +205,14 @@ class ViewController: UIViewController{
         previousnumber = 0
         latternumber = 0
         pt = 0
-        
+        two = ""
+        a = ""
+        ca = 0
+        fh = ""
     }
     
     @IBAction func gxt_dy(_ sender: Any) {
-        latternumber = Double(test.text!)!
+        latternumber = Double(two)!
         test.text = String(latternumber)
         test.text = "0"
         if ca == 1{
@@ -154,7 +234,8 @@ class ViewController: UIViewController{
             }
             else{
             result =  previousnumber / latternumber
-             test.text = String(format:"%.2lf",result)
+                //test.text = a = String(previousnumber)
+                test.text = a + fh + two + "=" + String(format:"%.2lf",result)
             }
         }
         
