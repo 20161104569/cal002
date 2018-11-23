@@ -31,6 +31,7 @@ class ViewController: UIViewController{
     @IBOutlet weak var test: UITextField!
     @IBAction func gxt_point(_ sender: Any) {
         if pt == 0{
+            two = two + "."
             test.text = test.text! + "."
             
             pt=1
@@ -218,15 +219,15 @@ class ViewController: UIViewController{
         if ca == 1{
            
             result = previousnumber + latternumber
-            test.text = String(format:"%.2lf",result)
+              test.text = a + fh + two + "=" + String(format:"%.2lf",result)
         }else if ca == 2{
            
             result =  previousnumber - latternumber
-             test.text = String(format:"%.2lf",result)
+               test.text = a + fh + two + "=" + String(format:"%.2lf",result)
         }else if ca == 3{
             
             result =  previousnumber * latternumber
-             test.text = String(format:"%.2lf",result)
+              test.text = a + fh + two + "=" + String(format:"%.2lf",result)
         }else if ca == 4{
             if latternumber == 0
             {
@@ -234,13 +235,13 @@ class ViewController: UIViewController{
             }
             else{
             result =  previousnumber / latternumber
-                //test.text = a = String(previousnumber)
+               
                 test.text = a + fh + two + "=" + String(format:"%.2lf",result)
             }
         }
         
         
-           pt = 0
+           //pt = 0
     }
     override func viewDidLoad() {
     super.viewDidLoad()
